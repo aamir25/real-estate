@@ -1,0 +1,8 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "real-estate",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {}
+}
