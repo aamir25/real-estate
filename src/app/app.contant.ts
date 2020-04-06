@@ -1,0 +1,1 @@
+export const BASE_URL = 'https://us-central1-real-estate-api-47dbc.cloudfunctions.net/realEstate';

@@ -1,0 +1,78 @@
+<div class="content-wrapper">
+  <div class="action-container">
+    <div class="region-filter">
+      <ion-select
+        [interfaceOptions]="regionActionSheetOptions"
+        interface="action-sheet"
+        (ionChange)="filterRegion($event.target.value)"
+        placeholder="Region"
+      >
+        <ion-select-option value="">All Regions</ion-select-option>
+        <ion-select-option
+          *ngFor="let region of regionsArr"
+          [value]="region"
+        >{{ region }}</ion-select-option>
+      </ion-select>
+    </div>
+
+    <div class="input-group">
+      <label>
+        <input
+          type="search"
+          [(ngModel)]="searchPattern"
+          (search)="searchOnName()"
+          placeholder="Search"
+        />
+      </label>
+
+      <button
+        class="unit"
+        (click)="searchPattern = ''; searchOnName();"
+        type="button"
+      >
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+      <button
+        class="unit"
+        (click)="searchOnName()"
+        type="button"
+      >
+        <ion-icon name="search-outline"></ion-icon>
+      </button>
+    </div>
+  </div>
+
+  <div
+    matRipple
+    class="card"
+    *ngFor="let propertyId of propertyIdArr"
+    (click)="goToProperty(propertyId)"
+  >
+    <div class="img-container">
+      <img
+        [src]="domSanitizer.bypassSecurityTrustUrl(propertiesObject[propertyId].propertyExtraInfo.images[0])"
+        onError="this.src='../../assets/clip-art/house.png'"
+        alt=""
+      >
+    </div>
+
+    <div class="content">
+      <ion-card-header>
+        <ion-card-title>{{ propertiesObject[propertyId].propertyName }}</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>{{ propertiesObject[propertyId].propertyRegion }}</ion-card-content>
+    </div>
+  </div>
+</div>
+
+<div class="add-btn-wrapper">
+  <button
+    mat-fab
+    color="primary"
+    [routerLink]="['/tabs/tab1/add/']"
+  >
+    <ion-icon name="add-outline"></ion-icon>
+  </button>
+</div>

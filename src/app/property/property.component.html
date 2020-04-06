@@ -1,0 +1,90 @@
+<div class="container">
+  <div
+    class="back-btn"
+    matRipple
+    (click)="goBack()"
+  >
+    <ion-icon name="chevron-back-outline"></ion-icon>
+  </div>
+
+  <ion-slides
+    pager="true"
+    [options]="slideOpts"
+    style="height:200px"
+    autoplay="true"
+    loop="true"
+    *ngIf="propertyImages.length !== 0"
+  >
+    <ion-slide
+      *ngFor="let img of propertyImages"
+      (click)="photoViewer.show(img)"
+    >
+      <img
+        [src]="domSanitizer.bypassSecurityTrustUrl(img)"
+        onError="this.src='../../assets/clip-art/house.png'"
+        alt=""
+      >
+    </ion-slide>
+  </ion-slides>
+
+  <div
+    class="no-images-img"
+    *ngIf="propertyImages.length === 0"
+  >
+    <img
+      src="../../assets/clip-art/house.png"
+      height="180"
+      alt=""
+    >
+  </div>
+
+  <div class="details-container">
+    <div class="name">
+      <span>{{ propertyDetails.propertyName }}</span>
+    </div>
+
+    <div class="region">
+      <span>{{ propertyDetails.propertyRegion }}</span>
+    </div>
+
+    <div class="desc">
+      <span>{{ propertyDetails.propertyDescription }}</span>
+    </div>
+  </div>
+
+  <div class="plots-container">
+    <div class="plots-wrapper">
+      <div class="sold-container">
+        <span>Sold Plots</span>
+        <span class="plot-count">70</span>
+      </div>
+
+      <div class="available-container">
+        <span>Available Plots</span>
+        <span class="plot-count">40</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="doc-list-container">
+    <div
+      class="doc"
+      matRipple
+      (click)="viewDoc(doc)"
+      *ngFor="let doc of propertyDocuments"
+    >
+      <div class="doc-icon">
+        <ion-icon name="document-outline"></ion-icon>
+      </div>
+
+      <div class="doc-name">
+        <span>Property Document</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="action-container">
+    <button (click)="editListing()">Edit</button>
+    <button (click)="deleteListing()">Delete</button>
+  </div>
+</div>

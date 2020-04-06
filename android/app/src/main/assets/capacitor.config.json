@@ -1,0 +1,14 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "real-estate",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {},
+  "server": {
+    "url": "http://192.168.0.129:8100",
+    "cleartext": true,
+    "originalUrl": "http://192.168.0.129:8100",
+    "originalCleartext": true
+  }
+}

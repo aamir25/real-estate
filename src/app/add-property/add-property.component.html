@@ -1,0 +1,117 @@
+<div class="form-container">
+  <div
+    class="back-btn"
+    matRipple
+    (click)="goBack()"
+  >
+    <ion-icon name="chevron-back-outline"></ion-icon>
+  </div>
+
+  <form>
+    <label>
+      <span>Name</span>
+      <input
+        type="text"
+        name="properyName"
+        [(ngModel)]="properyName"
+      >
+    </label>
+
+    <label>
+      <span>Description</span>
+      <textarea
+        [(ngModel)]="properyDesc"
+        name="properyDesc"
+        id=""
+        cols="30"
+        rows="5"
+      ></textarea>
+    </label>
+
+    <label>
+      <span>Region</span>
+      <input
+        type="text"
+        name="properyRegion"
+        [(ngModel)]="properyRegion"
+      >
+    </label>
+
+    <div class="drop-zone-wrapper">
+      <span>Images</span>
+      <div
+        class="drop-zone"
+        (click)="selectImages()"
+      >
+        <span>
+          <ion-icon name="add-outline"></ion-icon>
+          Add Images
+
+        </span>
+      </div>
+    </div>
+
+    <!-- <ion-list>
+      <ion-item *ngFor="let img of imageArray; index as i">
+        <ion-thumbnail>
+          <img [src]="DomSanitizer.bypassSecurityTrustUrl(img)">
+        </ion-thumbnail>
+
+        <ion-button
+          slot="end"
+          fill="clear"
+          (click)="deleteImage(img, i)"
+        >
+          <ion-icon
+            slot="icon-only"
+            name="trash"
+          ></ion-icon>
+        </ion-button>
+      </ion-item>
+    </ion-list> -->
+
+    <div class="document-wrapper">
+      <span>Documents</span>
+
+      <div class="doc-list-container">
+        <div
+          class="doc"
+          matRipple
+          (click)="viewDoc(doc)"
+          *ngFor="let doc of propertyDocuments"
+        >
+          <div class="doc-icon">
+            <ion-icon name="document-outline"></ion-icon>
+          </div>
+
+          <div class="doc-name">
+            <span>Property Document</span>
+          </div>
+        </div>
+      </div>
+
+      <button (click)="selectDocuments()">
+        <ion-icon name="add-outline"></ion-icon>
+        <span>Add Documents</span>
+      </button>
+      <!-- <div class="drop-zone">
+        <span>
+          <ion-icon name="add-outline"></ion-icon>
+          Add Documents
+        </span>
+      </div> -->
+    </div>
+
+    <div class="submit-btn">
+      <button
+        matRipple
+        *ngIf="propertyId"
+      >Update Property</button>
+      <button
+        matRipple
+        (click)="addProperty()"
+        *ngIf="!propertyId"
+      >Add Property</button>
+    </div>
+  </form>
+</div>

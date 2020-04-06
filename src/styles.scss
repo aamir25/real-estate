@@ -1,0 +1,77 @@
+@import '~@angular/material/theming';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+/* For use in src/lib/core/theming/_palette.scss */
+$md-mcgpalette0: (
+    50 : #e8eaec,
+    100 : #c6cacf,
+    200 : #a0a7af,
+    300 : #7a838f,
+    400 : #5e6977,
+    500 : #414e5f,
+    600 : #3b4757,
+    700 : #323d4d,
+    800 : #2a3543,
+    900 : #1c2532,
+    A100 : #78aaff,
+    A200 : #4589ff,
+    A400 : #1269ff,
+    A700 : #005bf7,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$md-mcgpalette1: (
+    50 : #fdfefe,
+    100 : #fafbfc,
+    200 : #f6f9fb,
+    300 : #f2f7f9,
+    400 : #f0f5f7,
+    500 : #edf3f6,
+    600 : #ebf1f5,
+    700 : #e8eff3,
+    800 : #e5edf2,
+    900 : #e0eaef,
+    A100 : #ffffff,
+    A200 : #ffffff,
+    A400 : #ffffff,
+    A700 : #ffffff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+
+$primary: mat-palette($md-mcgpalette0);
+$accent: mat-palette($md-mcgpalette1);
+
+$theme: mat-light-theme($primary, $accent);
+
+@include angular-material-theme($theme);

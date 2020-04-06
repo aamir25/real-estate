@@ -1,0 +1,222 @@
+$ruler: 16px;
+$color-red: #AE1100;
+$color-bg: #EBECF0;
+$color-shadow: #BABECC;
+$color-white: #FFF;
+
+
+input, textarea {
+  margin-right: $ruler/2;
+  box-shadow:  inset 2px 2px 5px $color-shadow, inset -5px -5px 10px $color-white;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  appearance: none;
+  -webkit-appearance: none;
+
+  &:focus {
+    box-shadow:  inset 1px 1px 2px $color-shadow, inset -1px -1px 2px $color-white;
+  }
+}
+
+button {
+  color:#61677C;
+  font-weight: bold;
+  box-shadow: -5px -5px 20px $color-white,  5px 5px 20px $color-shadow;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  font-weight: 600;
+  
+  &:hover {
+    box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow;
+  }
+  
+  &:active {
+    box-shadow: inset 1px 1px 2px $color-shadow, inset -1px -1px 2px $color-white;
+  }
+  
+  .icon {
+    margin-right: $ruler/2;
+  }
+  
+  &.unit {
+    border-radius: $ruler/2;
+    line-height: 0;
+    width: $ruler*3;
+    height: $ruler*3;
+    display:inline-flex;
+    justify-content: center;
+    align-items:center;
+    margin: 0 $ruler/2;
+    font-size: $ruler*1.2;
+    
+    .icon {
+      margin-right: 0; 
+    }
+  }
+  
+  &.red {
+    display: block;
+    width: 100%;
+    color:$color-red;
+  }
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  
+  label {
+    margin: 0;
+    flex: 1;
+  }
+}
+
+.form-container {
+    background-color: $color-bg;
+    height: 100%;
+    overflow: auto;
+}
+
+form {
+    width: 100%;
+}
+
+.back-btn {
+    border-radius: 50%;
+    z-index: 10;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.back-btn ion-icon {
+    font-size: 32px;
+    color: #414e5f;
+}
+
+label span, .drop-zone-wrapper span {
+    margin: 15px;
+    font-size: 20px;
+    font-weight: 500;
+    text-shadow: 1px 1px 1px $color-white;
+    color: #61677C;
+}
+
+label input, label textarea, .drop-zone-wrapper .drop-zone {
+    margin-top: 10px;
+}
+
+textarea {
+    border-radius: 32px;
+}
+
+.drop-zone-wrapper {
+    margin-bottom: 24px;
+
+}
+
+.drop-zone {
+    border: 0;
+    outline: 0;
+    font-size: $ruler;
+    border-radius: $ruler*20;
+    padding: $ruler;
+    background-color:$color-bg;
+    text-shadow: 1px 1px 0 $color-white;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -0.2px;
+    font-size: $ruler;
+    margin-right: $ruler/2;
+    box-shadow:  inset 2px 2px 5px $color-shadow, inset -5px -5px 10px $color-white;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    appearance: none;
+    -webkit-appearance: none;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.drop-zone span {
+    align-self: center;
+    display: flex;
+    align-items: center;
+}
+
+.drop-zone span ion-icon {
+    font-size: 18px;
+}
+
+.drop-zone-wrapper button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.drop-zone-wrapper ion-icon {
+    font-size: 18px;
+}
+
+.document-wrapper button {
+    width: 100%;
+}
+
+.action-sheet-btn {
+    box-shadow: none !important;
+    font-weight: normal !important;
+    border-radius: 0px !important;
+}
+
+.doc-list-container {
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.doc-list-container .doc {
+    display: flex;
+    margin-bottom: 10px;
+    border: solid 1px #414e5f;
+}
+
+.doc-list-container .doc .doc-icon, .doc-list-container .doc .doc-name {
+    padding: 10px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.doc-icon {
+    background-color: #414e5f;
+}
+
+.doc-icon ion-icon {
+    font-size: 32px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.submit-btn {
+    margin-top: 10px;
+}
+
+.submit-btn button {
+    width: 100%;
+    box-shadow: none !important;
+    background-color: #414e5f;
+    color: #fff;
+    text-shadow: none !important;
+}
+
+.sc-ion-action-sheet-md-h {
+    --background: $color-bg;
+}
+
+.action-sheet-button.ion-activated.sc-ion-action-sheet-md {
+    border-radius: 0px !important;
+}

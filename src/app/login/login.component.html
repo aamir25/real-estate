@@ -1,0 +1,65 @@
+<div class="container">
+  <div class="background-img"></div>
+
+  <div class="form">
+    <!-- <h1>Login As Admin</h1> -->
+
+    <!-- <form class="login-form">
+      <mat-form-field>
+        <mat-label>Phone</mat-label>
+        <input
+          type="tel"
+          matInput
+        />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input
+          type="password"
+          matInput
+        />
+      </mat-form-field>
+
+      <div class="sign-in-btn">
+
+        <button
+          mat-raised-button
+          color="primary"
+        >
+          <span>Sign In</span>
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </button>
+      </div>
+    </form> -->
+
+    <form>
+      <div class="segment">
+        <h1 class="primary">Login As Admin</h1>
+      </div>
+
+      <label>
+        <input
+          type="tel"
+          placeholder="Phone"
+        />
+      </label>
+
+      <label>
+        <input
+          type="password"
+          placeholder="Password"
+        />
+      </label>
+
+      <button
+        class="login-btn primary"
+        type="button"
+        (click)="login()"
+      >
+        Log in
+        <ion-icon name="arrow-forward-outline"></ion-icon>
+      </button>
+    </form>
+  </div>
+</div>

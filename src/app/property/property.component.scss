@@ -1,0 +1,131 @@
+.container {
+    position: relative;
+}
+
+.back-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 50%;
+    z-index: 10;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-btn ion-icon {
+    font-size: 32px;
+}
+
+.slides-md {
+    --bullet-background: #fff;
+    --bullet-background-active: #fff;
+}
+
+.no-images-img {
+    text-align: center;
+    padding: 10px;
+}
+
+.details-container {
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.details-container .name {
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.details-container .region {
+    font-size: 22px;
+}
+
+.details-container .desc {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.plots-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.plots-container .plots-wrapper {
+    display: flex;
+}
+
+.plots-container .sold-container, .plots-container .available-container {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.plots-container .sold-container .plot-count, .plots-container .available-container .plot-count {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.plots-container .sold-container {
+    border-radius: 35px 0px 0px 35px;
+    background-color: #414e5f;
+    color: #fff;
+    text-shadow: none !important;
+}
+
+.plots-container .available-container {
+    border-radius: 0px 35px 35px 0px;
+    border: 1px solid #414e5f ;
+}
+
+.doc-list-container {
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.doc-list-container .doc {
+    display: flex;
+    margin-bottom: 10px;
+    border: solid 1px #414e5f;
+}
+
+.doc-list-container .doc .doc-icon, .doc-list-container .doc .doc-name {
+    padding: 10px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.doc-icon {
+    background-color: #414e5f;
+}
+
+.doc-icon ion-icon {
+    font-size: 32px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.action-container {
+    padding: 10px;
+    display: flex;
+}
+
+.action-container button {
+    width: 100%;
+}
+
+.action-container button:first-child {
+    margin-right: 5px;
+}
+
+.action-container button:last-child {
+    margin-left: 5px;
+    color: #AE1100
+}

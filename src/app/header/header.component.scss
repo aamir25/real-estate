@@ -1,0 +1,51 @@
+$ruler: 16px;
+$color-red: #AE1100;
+$color-primary: #414e5f;
+$color-bg: #EBECF0;
+$color-shadow-1: #2c3440;
+$color-shadow-2: #56687e;
+$color-white: #FFF; 
+
+.header-container {
+    display: flex;
+    background-color: $color-primary;
+    height: 60px;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.notification-container ion-icon {
+    color:#fff;
+    font-size: $ruler*1.5;
+}
+
+.user-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    border: 0;
+    outline: 0;
+    font-size: $ruler;
+    border-radius: $ruler*20;
+    padding: $ruler/2;
+    background-color:$color-bg;
+    text-shadow: 1px 1px 0 $color-shadow-2;
+    --ripple-color: transparent;
+}
+
+.user-container {
+    color:#fff;
+    background-color: #414e5f;
+    box-shadow: 5px 5px 10px $color-shadow-1,  -5px -5px 10px $color-shadow-2;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-weight: 700;
+        
+    .icon {
+        margin-right: $ruler/2;
+    }
+}
+
+.user-container ion-icon {
+    margin-left: 5px;
+}

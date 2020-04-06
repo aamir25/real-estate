@@ -1,3 +1,20 @@
-ion-content ion-toolbar {
-  --background: translucent;
+$color-bg: #EBECF0;
+$color-shadow: #BABECC;
+$color-white: #FFF;
+
+.container {
+    padding: 10px 5px;
+    // height: 100%;
+    overflow: scroll;
+}
+
+ion-content {
+    --background: #EBECF0;
+}
+
+.input-group {
+    z-index: 1;
+    width: 100%;
+    background-color: $color-bg;
+    padding: 10px 5px;
 }

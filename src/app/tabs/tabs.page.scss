@@ -1,1 +1,67 @@
+$ruler: 16px;
+$color-red: #AE1100;
+$color-primary: #414e5f;
+$color-bg: #EBECF0;
+$color-shadow-1: #2c3440;
+$color-shadow-2: #56687e;
+$color-white: #FFF; 
 
+ion-tab-bar {
+  background-color: $color-primary;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.header {
+    padding: 10px 5px;
+}
+
+button, input {
+  border: 0;
+  outline: 0;
+  font-size: $ruler;
+  border-radius: $ruler*20;
+  padding: $ruler/2;
+  background-color:$color-bg;
+  text-shadow: 1px 1px 0 $color-shadow-2;
+  --ripple-color: transparent;
+}
+
+button {
+  color:#fff;
+  background-color: #414e5f;
+  box-shadow: 5px 5px 10px $color-shadow-1,  -5px -5px 10px $color-shadow-2;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  font-weight: 700;
+    
+  &:active {
+    box-shadow: inset 5px 5px 10px $color-shadow-1, inset -5px -5px 10px $color-shadow-2;
+  }
+  
+  .icon {
+    margin-right: $ruler/2;
+  }
+  
+  &.unit {
+    border-radius: $ruler/2;
+    line-height: 0;
+    width: $ruler*3 !important;
+    height: $ruler*3 !important;
+    display:inline-flex;
+    justify-content: center;
+    align-items:center;
+    margin: 0 $ruler/2;
+    font-size: $ruler*1.2;
+    
+    .icon {
+      margin-right: 0; 
+    }
+  }
+}
+
+.button-active {
+      box-shadow: inset 5px 5px 10px $color-shadow-1, inset -5px -5px 10px $color-shadow-2 !important;
+}
